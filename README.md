@@ -2,7 +2,7 @@
 
 Welcome to my project! Below is the project logo.
 
-![Logo](assets/logo.png)
+![Logo](assets/640px-Postgresql_elephant.svg.png)
 
 ## Features
 - Feature 1
