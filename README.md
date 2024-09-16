@@ -25,36 +25,53 @@ Welcome to the PostgreSQL Learning Repository! This guide is designed to help yo
 15. [Advanced Topics](#advanced-topics)
 16. [Backup & Restore](#backup--restore)
 17. [Performance Tuning](#performance-tuning)
-18. [Resources](#resources)
-
----
-
-## Introduction
-
-PostgreSQL, often referred to as "Postgres," is an advanced, enterprise-class open-source relational database system that supports both SQL (relational) and JSON (non-relational) querying. This repository is aimed at providing an easy-to-follow learning path for mastering PostgreSQL.
+18. [Supabase Integration](#supabase-integration)
+19. [Resources](#resources)
 
 ---
 
 ## Installation
 
-To install PostgreSQL on your machine, follow these steps based on your operating system:
+### Supabase
 
-- **Ubuntu/Linux:**
-    ```bash
-    sudo apt update
-    sudo apt install postgresql postgresql-contrib
-    ```
+1. **Sign Up**: Create an account on [Supabase](https://supabase.com/).
+2. **Create a Project**: Set up a new project from the Supabase dashboard.
+3. **Get Connection Details**: Note your connection credentials from the Supabase dashboard.
 
-- **MacOS (using Homebrew):**
-    ```bash
-    brew install postgresql
-    brew services start postgresql
-    ```
+### PostgreSQL Client App
 
-- **Windows:**
-    Download and install from the [official website](https://www.postgresql.org/download/).
+Install a PostgreSQL client app on your mobile device. Some popular options include:
+- **PG Commander**
+- **Postico**
+- **DataGrip**
 
-After installation, ensure PostgreSQL is running and you can connect to the PostgreSQL shell using:
-```bash
-psql -U postgres
+---
+
+## Basic SQL Commands
+
+```diff
+# Create a Database
+CREATE DATABASE my_database;
+
+# Connect to a Database
+\c my_database
+
+# Create a Table
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100)
+);
+
+# Insert Data
+INSERT INTO users (name, email) VALUES ('John Doe', 'john.doe@example.com');
+
+# Select Data
+SELECT * FROM users;
+
+# Update Data
+UPDATE users SET name = 'Jane Doe' WHERE id = 1;
+
+# Delete Data
+DELETE FROM users WHERE id = 1;
 
